@@ -18,9 +18,9 @@ const CitySchema = Schema({
     timestamps: true
 });
 
-UserSchema.method('toJSON', function () {
+CitySchema.method('toJSON', function () {
     const { __v, _id, ...object } = this.toObject();
-    object.uid = _id;
+    object.id = _id;
     return object;
 });
 

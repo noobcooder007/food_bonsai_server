@@ -18,9 +18,9 @@ const StateSchema = Schema({
     timestamps: true
 });
 
-UserSchema.method('toJSON', function () {
+StateSchema.method('toJSON', function () {
     const { __v, _id, ...object } = this.toObject();
-    object.uid = _id;
+    object.id = _id;
     return object;
 });
 

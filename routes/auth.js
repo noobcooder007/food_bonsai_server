@@ -26,6 +26,9 @@ router.post('/new',[
     check('contact.address.number','The number is mandatory').isNumeric(),
     check('contact.address.cp','The C.P. is mandatory').isPostalCode('MX'),
     check('contact.address.city','The city is mandatory'),
+    check('access.level','The level is mandatory').not().isEmpty(),
+    check('access.group','The group is mandatory').not().isEmpty(),
+    check('workshift','The workshift is mandatory').not().isEmpty(),
     validateFields
 ], createUser);
 
