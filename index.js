@@ -19,6 +19,7 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/address', require('./routes/address'));
 app.use('/api/workshift', require('./routes/workshift'));
 app.use('/api/rol', require('./routes/rol'));
+app.use('/api/sales', require('./routes/sales'));
 
 server.listen(process.env.PORT, (err) => {
     if (err) {
